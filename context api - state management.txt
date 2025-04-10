@@ -1,0 +1,14 @@
+context api <- state management 
+redux for complex
+lazy load suspense 
+
+for optimization: 
+react.memo 
+useMemo
+use CallBack
+debounceLogic
+throttling
+Image Optimization
+
+
+Next.js does routing handles everything

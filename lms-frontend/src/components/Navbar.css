@@ -1,0 +1,130 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styles */
+nav {
+  position: fixed; /* Fix the navbar to the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make the navbar span the full width */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure the navbar stays above other elements */
+}
+
+nav h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb; /* Tailwind's blue-600 */
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4b5563; /* Tailwind's gray-700 */
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #2563eb; /* Tailwind's blue-600 */
+}
+
+nav button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #2563eb; /* Tailwind's blue-600 */
+  border: none;
+  border-radius: 0.375rem; /* Tailwind's rounded-md */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #1d4ed8; /* Tailwind's blue-700 */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* Hide menu on smaller screens */
+  }
+
+  nav button {
+    font-size: 0.875rem; /* Tailwind's text-sm */
+  }
+}
+
+/* Default Light Theme */
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --nav-bg: #ffffff;
+  --link: #1a1a1a;
+  --btn-bg: #2563eb;
+  --btn-text: #ffffff;
+}
+
+/* Dark Theme */
+.dark {
+  --bg: #1a1a1a;
+  --text: #f1f1f1;
+  --nav-bg: #121212;
+  --link: #f1f1f1;
+  --btn-bg: #3b82f6;
+  --btn-text: #ffffff;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.navbar {
+  background-color: var(--nav-bg);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .links a {
+  color: var(--link);
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  margin-left: 1rem;
+  cursor: pointer;
+  color: var(--link);
+}

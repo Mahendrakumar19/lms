@@ -43,6 +43,9 @@ const Navbar = () => {
         >
           Login
         </MyButton>
+        <button onClick={toggleDarkMode} className="theme-toggle">
+          {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
       </div>
     </nav>
   );

@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Courses from './pages/Courses';
-import Dashboard from '../src/components/Dashboard/Dashboard';
+
 
 function App() {
   return (
@@ -16,7 +16,6 @@ function App() {
       <main className="centered-content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/courses" element={<Courses />} />

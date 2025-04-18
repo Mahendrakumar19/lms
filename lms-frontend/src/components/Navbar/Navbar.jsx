@@ -30,6 +30,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo">MyLMS</div>
       <div className="links">
+<<<<<<< HEAD
         {/* <a href="/">Home</a>
         <a href="/dashboard">Dashboard</a> */}
         <a href="/"></a>
@@ -41,6 +42,24 @@ const Navbar = () => {
                 >
                   Login
                 </MyButton>
+=======
+        <a href="/">Home</a>
+        <a href="/">Dashboard</a>
+        <a href="/courses">Courses</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <MyButton
+          onClick={() => {
+            window.location.href =
+              "http://13.203.101.114/moodle/login/index.php";
+          }}
+        >
+          Login
+        </MyButton>
+        <button onClick={toggleDarkMode} className="theme-toggle">
+          {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
+>>>>>>> 309769641921e96c4554421e004bc12f3b7a82e2
       </div>
     </nav>
   );

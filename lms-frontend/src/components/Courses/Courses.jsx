@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./courses.css";
 import MyButton from "../MyButton/MyButton";
 import { FiBook, FiHash, FiCalendar, FiAward } from "react-icons/fi";
-
+// import Home from "../Home/Home";
 const Courses = () => {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -40,10 +40,12 @@ const Courses = () => {
   if (error) return <div className="error">Error: {error}</div>;
 
   return (
+    <>
+   {/* <Home/> */}
     <div className="courses-container">
       <div className="courses-header">
         <h1 className="courses-title">
-          <FiBook className="title-icon" /> Available Courses
+          <FiBook className="title-icon" /> All Courses
         </h1>
       </div>
 
@@ -94,6 +96,7 @@ const Courses = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
